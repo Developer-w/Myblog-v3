@@ -1,0 +1,457 @@
+/* ######## ATRIBUTOS GENERALES ######### */
+
+@import "variables";
+@import "settingPage";
+
+
+.header {
+    background-image: $gradient-header, url(../img/img_header.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+
+    .nav-link,
+    .navbar-brand {
+        color: var(--bs-primary) !important;
+
+        .container-fluid {
+            width: 100%;
+            height: 40px;
+        }
+
+    }
+
+    .container-fluid button {
+        width: auto;
+    }
+
+    .nav-item:hover {
+        transform: scale(1.2);
+        transition: all 300ms;
+    }
+
+    .nav-item:hover a {
+        color: $bs-gray-dark !important;
+    }
+}
+
+
+
+
+.contenedor-head {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+
+    .titulo-head {
+        margin-bottom: 15px;
+        color: $bs-blue;
+
+        /* <!-- animate.css --> */
+        animation: flash infinite;
+        animation-duration: 5s;
+        /* <!-- animate.css --> */
+
+        @media screen and (max-width:800px) {
+
+            font-size: 40px;
+                
+        }
+
+        @media screen and (max-width:500px) {
+            font-size: 25px;
+            text-align: justify;
+        }
+    }
+
+    .copy {
+        font-weight: 300;
+        font-size: 25px;
+        margin: 15px;
+        width: 60%;
+        text-align: justify;
+        color: $bs-indigo;
+
+        @media screen and (max-width:800px) {
+
+            font-size: 20px;
+                
+        }
+
+        @media screen and (max-width:500px) {
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+
+}
+/* ######## Fin ENCABEZADO - MENU DE NAVEGACION ######### */
+
+
+/* ######## SECCION MAIN ######### */
+main {
+
+    .Subtitulo {
+        text-align: center;
+        font-weight: 300;
+        color: $bs-blue;
+        margin-bottom: 40px;
+        font-size: 40px;
+
+        @media screen and (max-width:500px) {
+            font-size: 30px;
+        }
+    }
+
+    /* Inicio Section Acerca de */
+    .contenedor {
+
+        .presentacion {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            padding-bottom: 50px;
+            height: auto;
+
+            .video-pre {
+                width: 60%;
+
+                @media screen and (max-width:500px) {
+                    width: 90%;
+                }
+            }
+        }
+
+        .contenedor-acerca-de {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .img {
+                width: 40%;
+
+                @media screen and (max-width:800px) {
+                    width: 80%;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .graph-acerca-de {
+                width: 45%;
+
+                @media screen and (max-width:800px) {
+                    width: 80%;
+                }
+
+                .about_us {
+                    margin-bottom: 20px;
+
+                    .n-about_us {
+                        margin-bottom: 7px;
+                        color: $bs-blue;
+
+                        @media screen and (max-width:800px) {
+                            margin-bottom: 30px;
+                        }
+
+                        .number {
+                            display: inline-block;
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            color: $bs-blue;
+                            text-align: center;
+                            font-weight: 700;
+                            line-height: 35px;
+                            margin-right: 10px;
+                            background-image: $bs-gradient2;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+    }
+
+}
+/* Fin Section Acerca de */
+
+
+/* Inicio Section Card */
+
+.video {
+    background-color: bs-light;
+
+    .container {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .card {
+            margin-bottom: 20px;
+            height: 440px;
+
+            @media screen and (max-width:500px) {
+                height: auto;
+            }
+
+            .card-body{
+                .card-text {
+                    color: $bs-gray-dark;
+                }
+            }
+        }
+    }
+}
+/* Fin Section Card */
+
+
+/* Inicio Section Donar */
+.contenedor {
+
+    .donar {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        
+
+        .cont-donar {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 20px;
+            height: 580px;
+
+            @media screen and (max-width:800px) {
+                width: 70%;
+                height: 50%;
+            }
+
+            img {
+                width: 80%;
+                display: block;
+                margin: auto;
+            }
+
+            .donar_parrafo {
+                color: $bs-gray-dark;
+            }
+            
+            
+            .donar-ind {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 15px;
+                width: 100%;
+                font-weight: 400;
+                padding: 10px;
+                border: 1px solid $bs-indigo;
+                border-radius: 30px;
+                width: 70%;
+                background-color: $bs-indigo;
+                color: $bs-white;
+                cursor: pointer;
+                margin-bottom: 15px;
+            }
+
+            .donar-ind:hover {
+                background-color: $bs-blue;
+                color: $bs-white;
+            }
+        }
+    }
+}
+/* fin Section Donar */
+
+
+/* ## Inicio Formulario ## */
+.Contacto {
+    background-color: $bs-light;
+    width: 100%;
+    height: auto;
+
+    .text-label {
+        display: grid;
+        grid-template-columns: auto;
+        grid-row-gap: 10px;
+        color: $bs-indigo;
+    }
+    
+    
+    .text-label input[type="text"],
+    .text-label input[type="email"] {
+        background-color: $bs-white;
+        border: 1px solid $bs-light;
+        border-radius: 10px;
+        width: 100%;
+        padding: 7px;
+        font-size: 14px;
+    }
+    
+    .textarea {
+        margin-bottom: 20px;
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 150px;
+        max-height: 150px;
+        background: $bs-white;
+        border-radius: 10px;
+        border: 1px solid $bs-border;
+        padding: 7px;
+    }
+    
+    .btn {
+        display: flex;
+        justify-content: flex-end;
+
+        button {
+            padding-top: 20px;
+            padding: 10px 10px;
+            border-radius: 10px;
+            text-align: center;
+            color: $bs-white;
+            width: 150px;
+            background-color: $bs-indigo;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+            font-size: 15px;
+        }
+        
+        button:hover {
+            background-color: $bs-blue;
+            color: $bs-botton;
+        }
+    }
+}
+
+
+/* ## Fin formulario ## */
+
+
+/* ## Inicio footer ## */
+footer {
+    background-color: $bs-gray-dark;
+    padding-bottom: 0.1px;
+
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 60px;
+        padding-bottom: 40px;
+
+        @media screen and (max-width:800px) {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont-logo {
+            width: 40%;
+            color: $bs-white;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width:800px) {
+                text-align: center;
+                width: 80%;
+                margin-bottom: 40px;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                font-weight: 500;
+                font-size: 40px;
+
+                @media screen and (max-width:800px) {
+                    width: 80%;
+                }
+
+                a {
+                    color: $bs-white;
+                    margin: 20px;
+                    text-decoration: none;
+                }
+            }
+
+            .logo-p {
+                font-weight: 300;
+                margin: 10px;
+            }
+        }
+
+        .social-media {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+
+            @media screen and (max-width:800px) {
+                width: 80%;
+                justify-content: space-evenly;
+            }
+
+            @media screen and (max-width:500px) {
+                width: 90%;
+                flex-wrap: wrap;
+                padding: 20px;
+            }
+
+            .social-media-icon {
+                display: inline-block;
+                margin-left: 20px;
+                width: 60px;
+                height: 60px;
+                border: 1px solid $bs-white;
+                border-radius: 50%;
+                text-align: center;
+                color: var(--bs-blue);
+                background-color: $bs-white;
+
+                @media screen and (max-width:800px) {
+                    margin-left: 0;
+                }
+
+                @media screen and (max-width:500px) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            i {
+                @media screen and (max-width:800px) {
+                    margin-left: 0;
+                }
+            }
+
+            .social-media-icon:hover {
+                background: $bs-blue;
+                color: $bs-white;
+                border: 1px solid $bs-blue;
+            }
+
+            i {
+                font-size: 30px;
+                line-height: 60px;
+            }
+
+        }
+    }
+}
+/* ## Inicio footer ## */
+
+
